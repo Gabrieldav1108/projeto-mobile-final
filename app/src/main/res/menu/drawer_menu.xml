@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_massa_atomica"
+        android:title="Massa Atômica"
+        android:icon="@android:drawable/ic_menu_info_details"/>
+    <item
+        android:id="@+id/nav_outro"
+        android:title="Outro item"
+        android:icon="@android:drawable/ic_menu_manage"/>
+</menu>
