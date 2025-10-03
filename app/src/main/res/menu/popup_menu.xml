@@ -3,6 +3,6 @@
         android:id="@+id/nav_massa_atomica"
         android:title="Massa Atômica"/>
     <item
-        android:id="@+id/nav_outro"
-        android:title="Outro Item"/>
+        android:id="@+id/nav_desenvolvedores"
+        android:title="Desenvolvedores"/>
 </menu>

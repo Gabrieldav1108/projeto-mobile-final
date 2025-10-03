@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -33,38 +34,23 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        LinearLayout itemMassaAtomica = findViewById(R.id.itemMassaAtomica);
+
+        // Adicionar o listener de clique
+        itemMassaAtomica.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                irParaCalculadoraMassaAtomica();
+            }
+        });
 
         btnMenu = findViewById(R.id.btnMenu);
 
-        btnMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showPopupMenu(v);
-            }
-        });
+        btnMenu.setOnClickListener(v -> MenuHelper.showPopupMenu(MainActivity.this, v));
     }
 
-    private void showPopupMenu(View anchor) {
-        PopupMenu popup = new PopupMenu(this, anchor);
-        popup.getMenuInflater().inflate(R.menu.popup_menu, popup.getMenu());
-
-        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                int id = item.getItemId();
-
-                if (id == R.id.nav_massa_atomica) {
-                    Intent intent = new Intent(MainActivity.this, massa_atomica.class);
-                    startActivity(intent);
-                    return true;
-                } else if (id == R.id.nav_outro) {
-                    Toast.makeText(MainActivity.this, "Outro item clicado", Toast.LENGTH_SHORT).show();
-                    return true;
-                }
-                return false;
-            }
-        });
-
-        popup.show();
+    private void irParaCalculadoraMassaAtomica() {
+        Intent intent = new Intent(this, CalculadoraMassaAtomica.class);
+        startActivity(intent);
     }
 }

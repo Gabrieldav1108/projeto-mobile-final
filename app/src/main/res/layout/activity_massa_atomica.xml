@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- CABEÇALHO -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
@@ -22,7 +21,17 @@
             android:layout_marginBottom="24dp"
             android:gravity="center_vertical">
 
-            <!-- Título -->
+            <!-- Ícone de voltar (nova seta à esquerda) -->
+            <ImageView
+                android:id="@+id/btnVoltar"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_arrow_back"
+                android:tint="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <!-- Título (centralizado) -->
             <TextView
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
@@ -33,7 +42,7 @@
                 android:textSize="22sp"
                 android:layout_centerInParent="true" />
 
-            <!-- Ícone de menu -->
+            <!-- Ícone de menu (mantido à direita) -->
             <ImageView
                 android:id="@+id/btnMenu"
                 android:layout_width="32dp"
@@ -42,16 +51,8 @@
                 android:tint="#000000"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true" />
-        </RelativeLayout>
 
-        <!-- O que é -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="O que é?"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:layout_marginBottom="8dp"/>
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -159,17 +160,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp">
 
-            <!-- Botão Voltar -->
-            <ImageView
-                android:id="@+id/btnVoltar"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/ic_arrow_back"
-                android:tint="#000000"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:contentDescription="Voltar" />
-
             <!-- Botão Calculadora -->
             <TextView
                 android:id="@+id/btnCalculadora"
@@ -185,6 +175,7 @@
                 android:gravity="center"
                 android:clickable="true"
                 android:focusable="true"
+                android:padding="20dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true" />
         </RelativeLayout>
