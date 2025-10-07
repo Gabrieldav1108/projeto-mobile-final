@@ -165,7 +165,7 @@
                 android:id="@+id/btnCalculadora"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_header"
+                android:background="@drawable/bg_button"
                 android:text="Calculadora"
                 android:textColor="#000000"
                 android:textStyle="bold"
