@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:id="@+id/main"
+
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#CCFFFFFF"
+android:padding="8dp">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/imgTabela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tabela_periodica"
+        android:adjustViewBounds="true" />
+</ScrollView>
+</LinearLayout>

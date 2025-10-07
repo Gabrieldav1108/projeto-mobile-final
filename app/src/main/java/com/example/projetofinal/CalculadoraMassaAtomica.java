@@ -6,12 +6,14 @@ import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.core.graphics.Insets;
@@ -42,6 +44,17 @@ public class CalculadoraMassaAtomica extends AppCompatActivity {
         ImageView btnVoltar = findViewById(R.id.btnVoltar);
         btnVoltar.setOnClickListener(v -> {
             finish();
+        });
+
+        ImageButton btnTabela = findViewById(R.id.btnTabelaPeriodica);
+
+        btnTabela.setOnClickListener(v -> {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            View view = getLayoutInflater().inflate(R.layout.dialog_tabela_periodica, null);
+            builder.setView(view);
+
+            AlertDialog dialog = builder.create();
+            dialog.show();
         });
 
         // Configurar menu
