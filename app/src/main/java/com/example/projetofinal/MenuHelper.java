@@ -26,6 +26,10 @@ public class MenuHelper {
                     Intent intent = new Intent(context, DesenvolvedoresActivity.class);
                     context.startActivity(intent);
                     return true;
+                }else if (id == R.id.nav_massa_molar) {
+                    Intent intent = new Intent(context, MassaMolar.class);
+                    context.startActivity(intent);
+                    return true;
                 }
                 return false;
             }

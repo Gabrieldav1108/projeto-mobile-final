@@ -2,4 +2,7 @@
     <string name="app_name">Calculadora Química</string>
     <string name="navigation_drawer_open">Abrir menu</string>
     <string name="navigation_drawer_close">Fechar menu</string>
+    <string name="formula_massa_molar"><b>Massa Molar</b> = (n1​×A1​)+(n2​×A2​)+…</string>
+    <string name="unidade_de_medida_massa_molar"><b>Unidade de medida:</b> A unidade de massa molar é g/mol (gramas por mol).</string>
+    <string name="definicao_masa_molar"><b>Definição:</b> É a massa de uma substância (elemento ou composto) correspondente a 1 mol de suas partículas (átomos, moléculas ou íons).</string>
 </resources>

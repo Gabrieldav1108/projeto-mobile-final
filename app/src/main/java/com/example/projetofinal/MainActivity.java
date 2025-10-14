@@ -35,12 +35,19 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         LinearLayout itemMassaAtomica = findViewById(R.id.itemMassaAtomica);
+        LinearLayout itemMassaMolar = findViewById(R.id.itemMassaMolar);
 
         // Adicionar o listener de clique
         itemMassaAtomica.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 irParaCalculadoraMassaAtomica();
+            }
+        });
+        itemMassaMolar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                irParaCalculadoraMassaMolar();
             }
         });
 
@@ -51,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void irParaCalculadoraMassaAtomica() {
         Intent intent = new Intent(this, CalculadoraMassaAtomica.class);
+        startActivity(intent);
+    }
+
+    private void irParaCalculadoraMassaMolar() {
+        Intent intent = new Intent(this, CalculadoraMassaMolar.class);
         startActivity(intent);
     }
 }

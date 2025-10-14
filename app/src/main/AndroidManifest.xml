@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoFinal">
         <activity
+            android:name=".CalculadoraMassaMolar"
+            android:exported="false" />
+        <activity
+            android:name=".MassaMolar"
+            android:exported="false" />
+        <activity
             android:name=".DialogTabelaPeriodicaActivity"
             android:exported="false" />
         <activity

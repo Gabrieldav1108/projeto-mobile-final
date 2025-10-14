@@ -125,7 +125,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/itemMassaAtomica2"
+                android:id="@+id/itemMassaMolar"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
                 android:orientation="vertical"
@@ -139,12 +139,12 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/ic_atom" />
+                    android:src="@drawable/ic_atomo" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Massa Atômica"
+                    android:text="Massa Molar"
                     android:textSize="12sp"
                     android:layout_marginTop="4dp"/>
             </LinearLayout>
