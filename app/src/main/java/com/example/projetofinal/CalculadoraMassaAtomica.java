@@ -47,6 +47,30 @@ public class CalculadoraMassaAtomica extends AppCompatActivity {
         });
 
         ImageButton btnTabela = findViewById(R.id.btnTabelaPeriodica);
+        TextView btnMassaMolar = findViewById(R.id.btnUsarNaMassaMolar);
+
+        btnMassaMolar.setOnClickListener(v -> {
+            String massaAtomicaCalculada = tvResultado.getText().toString().trim();
+
+            if (TextUtils.isEmpty(massaAtomicaCalculada) || massaAtomicaCalculada.equals("--")) {
+                Toast.makeText(this, "Calcule a massa atômica antes de enviar.", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            try {
+                String massaSemUnidade = massaAtomicaCalculada.replace(" u", "").trim();
+                double massaValue = Double.parseDouble(massaSemUnidade);
+
+                // Enviar o valor para a Calculadora de Massa Molar
+                Intent intent = new Intent(CalculadoraMassaAtomica.this, CalculadoraMassaMolar.class);
+                intent.putExtra("massa_atomica", massaValue);
+                startActivity(intent);
+
+            } catch (NumberFormatException e) {
+                Toast.makeText(this, "Erro ao converter massa atômica", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         btnTabela.setOnClickListener(v -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -258,6 +282,7 @@ public class CalculadoraMassaAtomica extends AppCompatActivity {
             tvResultado.setText(resultado);
 
             Toast.makeText(this, "Cálculo realizado com sucesso!", Toast.LENGTH_SHORT).show();
+
         }
     }
 
