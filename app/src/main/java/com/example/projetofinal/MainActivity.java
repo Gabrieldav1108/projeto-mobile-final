@@ -6,6 +6,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -23,6 +24,7 @@ import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
     ImageView btnMenu;
+    private CuriosidadeHelper curiosidadeHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // Inicializar o helper do banco de dados de curiosidades
+        curiosidadeHelper = new CuriosidadeHelper(this);
+
+        // Carregar curiosidade aleatória
+        carregarCuriosidade();
+
         LinearLayout itemMassaAtomica = findViewById(R.id.itemMassaAtomica);
         LinearLayout itemMassaMolar = findViewById(R.id.itemMassaMolar);
 
@@ -56,6 +65,14 @@ public class MainActivity extends AppCompatActivity {
         btnMenu.setOnClickListener(v -> MenuHelper.showPopupMenu(MainActivity.this, v));
     }
 
+    private void carregarCuriosidade() {
+        TextView textViewCuriosidade = findViewById(R.id.textViewCuriosidade);
+        if (textViewCuriosidade != null) {
+            String curiosidade = curiosidadeHelper.obterProximaCuriosidade();
+            textViewCuriosidade.setText(curiosidade);
+        }
+    }
+
     private void irParaCalculadoraMassaAtomica() {
         Intent intent = new Intent(this, CalculadoraMassaAtomica.class);
         startActivity(intent);
@@ -64,5 +81,13 @@ public class MainActivity extends AppCompatActivity {
     private void irParaCalculadoraMassaMolar() {
         Intent intent = new Intent(this, CalculadoraMassaMolar.class);
         startActivity(intent);
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (curiosidadeHelper != null) {
+            curiosidadeHelper.close();
+        }
+        super.onDestroy();
     }
 }

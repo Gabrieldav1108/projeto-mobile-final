@@ -43,11 +43,10 @@
     </RelativeLayout>
 
     <FrameLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_header"
-        android:padding="12dp"
-        >
+        android:padding="12dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -57,14 +56,16 @@
             android:textStyle="bold"
             android:gravity="center"/>
 
+        <!-- ADICIONE ESTE ID -->
         <TextView
+            android:id="@+id/textViewCuriosidade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_text_arrounded"
             android:padding="8dp"
             android:gravity="center"
             android:layout_marginTop="30dp"
-            android:text="“Você sabia? O ouro é o único metal que não oxida facilmente no ar.”"/>
+            android:text="Carregando curiosidade..."/>
     </FrameLayout>
 
     <!-- FAIXA AZUL "Tabela Periódica" -->
