@@ -19,9 +19,9 @@ import androidx.core.view.WindowInsetsCompat;
 public class CalculadoraMassaMolar extends AppCompatActivity {
 
     private LinearLayout containerElementos;
-    private TextView btnCalcular, tvResultado;
+    private TextView btnCalcular, tvResultado, btnAdicionarCampo;
     private ImageView btnMenu;
-    private Double massaAtomicaInicial = null; // pode vir ou não
+    private Double massaAtomicaInicial = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,7 @@ public class CalculadoraMassaMolar extends AppCompatActivity {
         containerElementos = findViewById(R.id.containerElementos);
         btnCalcular = findViewById(R.id.btnCalcular);
         tvResultado = findViewById(R.id.tvResultado);
+        btnAdicionarCampo = findViewById(R.id.btnAdicionarCampo); // Novo botão
 
         findViewById(R.id.btnVoltar).setOnClickListener(v -> finish());
 
@@ -65,6 +66,9 @@ public class CalculadoraMassaMolar extends AppCompatActivity {
 
         // adiciona o primeiro campo, passando a massa atômica se existir
         adicionarElemento(massaAtomicaRecebida);
+
+        // ação do botão Adicionar Campo
+        btnAdicionarCampo.setOnClickListener(v -> adicionarElemento(null));
 
         // ação do botão Calcular
         btnCalcular.setOnClickListener(v -> calcularMassaMolar());
@@ -98,13 +102,7 @@ public class CalculadoraMassaMolar extends AppCompatActivity {
             etMassa.setText(String.valueOf(massaAtomica));
         }
 
-        // botão +
-        ImageButton btnAdd = new ImageButton(this);
-        btnAdd.setImageResource(android.R.drawable.ic_input_add);
-        btnAdd.setBackgroundColor(0x00000000);
-        btnAdd.setOnClickListener(v -> adicionarElemento(null)); // Não repassar a massa para novos campos
-
-        // botão x
+        // botão x (remover) - mantido em cada linha
         ImageButton btnRemove = new ImageButton(this);
         btnRemove.setImageResource(android.R.drawable.ic_delete);
         btnRemove.setBackgroundColor(0x00000000);
@@ -118,7 +116,6 @@ public class CalculadoraMassaMolar extends AppCompatActivity {
 
         layoutElemento.addView(etQuantidade);
         layoutElemento.addView(etMassa);
-        layoutElemento.addView(btnAdd);
         layoutElemento.addView(btnRemove);
 
         containerElementos.addView(layoutElemento);

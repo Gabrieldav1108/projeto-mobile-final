@@ -77,13 +77,30 @@
             android:orientation="vertical"
             android:layout_marginBottom="16dp" />
 
+        <!-- NOVO: Layout horizontal para os botões Adicionar e Calcular -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:gravity="start"
             android:layout_marginTop="16dp">
 
+            <!-- Botão Adicionar Campo -->
+            <TextView
+                android:id="@+id/btnAdicionarCampo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Adicionar"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:background="@drawable/bg_button"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_gravity="start" />
+
+            <!-- Botão Calcular -->
             <TextView
                 android:id="@+id/btnCalcular"
                 android:layout_width="wrap_content"
@@ -97,28 +114,28 @@
                 android:paddingVertical="10dp"
                 android:layout_gravity="start" />
 
-
-            <TextView
-                android:id="@+id/tvResultadoLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Resultado:"
-                android:textStyle="bold"
-                android:layout_marginTop="16dp"
-                android:layout_gravity="start" />
-
-            <TextView
-                android:id="@+id/tvResultado"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="--"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/bg_header"
-                android:padding="12dp"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_gravity="start" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvResultadoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resultado:"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="start" />
+
+        <TextView
+            android:id="@+id/tvResultado"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_header"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="start" />
 
     </LinearLayout>
 </ScrollView>
