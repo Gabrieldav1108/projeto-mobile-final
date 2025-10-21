@@ -1,11 +1,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:id="@+id/nav_home"
+        android:title="Tela Pricipal"/>
+    <item
         android:id="@+id/nav_massa_atomica"
         android:title="Massa Atômica"/>
     <item
-        android:id="@+id/nav_desenvolvedores"
-        android:title="Desenvolvedores"/>
-    <item
         android:id="@+id/nav_massa_molar"
         android:title="Massa Molar"/>
+    <item
+        android:id="@+id/nav_desenvolvedores"
+        android:title="Desenvolvedores"/>
+
 </menu>
