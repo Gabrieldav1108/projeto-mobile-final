@@ -22,6 +22,7 @@ public class CalculadoraMassaMolar extends AppCompatActivity {
     private TextView btnCalcular, tvResultado, btnAdicionarCampo;
     private ImageView btnMenu;
     private Double massaAtomicaInicial = null;
+    private boolean isPrimeiroElemento = true; // Nova variável para controlar o primeiro elemento
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +38,7 @@ public class CalculadoraMassaMolar extends AppCompatActivity {
         containerElementos = findViewById(R.id.containerElementos);
         btnCalcular = findViewById(R.id.btnCalcular);
         tvResultado = findViewById(R.id.tvResultado);
-        btnAdicionarCampo = findViewById(R.id.btnAdicionarCampo); // Novo botão
+        btnAdicionarCampo = findViewById(R.id.btnAdicionarCampo);
 
         findViewById(R.id.btnVoltar).setOnClickListener(v -> finish());
 
@@ -102,23 +103,27 @@ public class CalculadoraMassaMolar extends AppCompatActivity {
             etMassa.setText(String.valueOf(massaAtomica));
         }
 
-        // botão x (remover) - mantido em cada linha
-        ImageButton btnRemove = new ImageButton(this);
-        btnRemove.setImageResource(android.R.drawable.ic_delete);
-        btnRemove.setBackgroundColor(0x00000000);
-        btnRemove.setOnClickListener(v -> {
-            if (containerElementos.getChildCount() > 1) {
-                containerElementos.removeView(layoutElemento);
-            } else {
-                Toast.makeText(this, "Deve haver pelo menos um elemento", Toast.LENGTH_SHORT).show();
-            }
-        });
-
         layoutElemento.addView(etQuantidade);
         layoutElemento.addView(etMassa);
-        layoutElemento.addView(btnRemove);
+
+        // Só adiciona o botão X se NÃO for o primeiro elemento
+        if (!isPrimeiroElemento) {
+            // botão x (remover) - apenas para elementos adicionais
+            ImageButton btnRemove = new ImageButton(this);
+            btnRemove.setImageResource(android.R.drawable.ic_delete);
+            btnRemove.setBackgroundColor(0x00000000);
+            btnRemove.setOnClickListener(v -> {
+                if (containerElementos.getChildCount() > 1) {
+                    containerElementos.removeView(layoutElemento);
+                }
+            });
+            layoutElemento.addView(btnRemove);
+        }
 
         containerElementos.addView(layoutElemento);
+
+        // Marca que o primeiro elemento já foi criado
+        isPrimeiroElemento = false;
     }
 
     private void calcularMassaMolar() {
@@ -128,6 +133,8 @@ public class CalculadoraMassaMolar extends AppCompatActivity {
 
         for (int i = 0; i < count; i++) {
             LinearLayout linha = (LinearLayout) containerElementos.getChildAt(i);
+
+            // Ajuste: o primeiro elemento tem 2 views, os demais têm 3
             EditText etQuantidade = (EditText) linha.getChildAt(0);
             EditText etMassa = (EditText) linha.getChildAt(1);
 
