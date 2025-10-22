@@ -4,28 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:layout_marginEnd="25dp"
-    android:layout_marginStart="25dp"
-    android:padding="25dp">
+    android:padding="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Cabeçalho -->
+        <!-- CABEÇALHO -->
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="65dp"
             android:background="@drawable/bg_header"
-            android:paddingHorizontal="16dp"
-            android:layout_marginBottom="24dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginBottom="20dp"
             android:gravity="center_vertical">
 
             <ImageView
                 android:id="@+id/btnVoltar"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/ic_arrow_back"
                 android:tint="#000000"
                 android:layout_alignParentStart="true"
@@ -38,36 +37,38 @@
                 android:text="Massa Molar"
                 android:textStyle="bold"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="21sp"
                 android:layout_centerInParent="true" />
 
             <ImageView
                 android:id="@+id/btnMenu"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/ic_menu"
                 android:tint="#000000"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true" />
         </RelativeLayout>
 
-        <!-- Botão tabela periódica -->
+        <!-- BOTÃO TABELA PERIÓDICA -->
         <ImageButton
             android:id="@+id/btnTabelaPeriodica"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:src="@drawable/ic_tabela"
             android:background="@drawable/bg_button"
             android:layout_gravity="end"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="16dp"
             android:contentDescription="Abrir tabela periódica" />
 
+        <!-- ELEMENTOS -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Elementos:"
             android:textStyle="bold"
             android:textColor="#000000"
+            android:textSize="15sp"
             android:layout_marginBottom="12dp" />
 
         <LinearLayout
@@ -75,15 +76,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="20px" />
 
-        <!-- NOVO: Layout horizontal para os botões Adicionar e Calcular -->
+        <!-- BOTÕES ADICIONAR E CALCULAR -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="start"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
 
             <!-- Botão Adicionar Campo -->
             <TextView
@@ -93,12 +95,13 @@
                 android:text="+ Adicionar"
                 android:textColor="#000000"
                 android:textStyle="bold"
-                android:textSize="16sp"
+                android:textSize="15sp"
                 android:background="@drawable/bg_button"
-                android:paddingHorizontal="24dp"
-                android:paddingVertical="10dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="12dp"
                 android:layout_marginEnd="16dp"
-                android:layout_gravity="start" />
+                android:clickable="true"
+                android:focusable="true" />
 
             <!-- Botão Calcular -->
             <TextView
@@ -108,34 +111,45 @@
                 android:text="Calcular"
                 android:textColor="#000000"
                 android:textStyle="bold"
-                android:textSize="16sp"
+                android:textSize="15sp"
                 android:background="@drawable/bg_button"
-                android:paddingHorizontal="24dp"
-                android:paddingVertical="10dp"
-                android:layout_gravity="start" />
-
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="12dp"
+                android:clickable="true"
+                android:focusable="true" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvResultadoLabel"
-            android:layout_width="wrap_content"
+        <!-- RESULTADO -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Resultado:"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"
-            android:layout_gravity="start" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
 
-        <TextView
-            android:id="@+id/tvResultado"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="--"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/bg_header"
-            android:padding="12dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_gravity="start" />
+            <TextView
+                android:id="@+id/tvResultadoLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resultado:"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvResultado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_header"
+                android:text="--"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="14dp"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

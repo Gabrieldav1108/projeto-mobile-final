@@ -11,30 +11,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoFinal">
+
         <activity
             android:name=".CalculadoraMassaMolar"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.ProjetoFinal" />
         <activity
             android:name=".MassaMolar"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.ProjetoFinal" />
         <activity
             android:name=".DialogTabelaPeriodicaActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.ProjetoFinal" />
         <activity
             android:name=".DesenvolvedoresActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.ProjetoFinal" />
         <activity
             android:name=".CalculadoraMassaAtomica"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.ProjetoFinal" />
         <activity
             android:name=".massa_atomica"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.ProjetoFinal" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.ProjetoFinal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

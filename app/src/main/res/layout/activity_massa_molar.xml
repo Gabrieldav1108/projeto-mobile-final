@@ -4,8 +4,6 @@
     android:id="@+id/main"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:layout_marginStart="20dp"
-    android:layout_marginEnd="20dp"
     android:padding="16dp">
 
     <LinearLayout
@@ -13,25 +11,25 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- CABEÇALHO -->
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="65dp"
             android:background="@drawable/bg_header"
-            android:paddingHorizontal="16dp"
-            android:layout_marginBottom="24dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginBottom="20dp"
             android:gravity="center_vertical">
 
-            <!-- Ícone de voltar (nova seta à esquerda) -->
             <ImageView
                 android:id="@+id/btnVoltar"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/ic_arrow_back"
                 android:tint="#000000"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true" />
 
-            <!-- Título (centralizado) -->
             <TextView
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
@@ -39,108 +37,122 @@
                 android:text="Massa Molar"
                 android:textStyle="bold"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="21sp"
                 android:layout_centerInParent="true" />
 
-            <!-- Ícone de menu (mantido à direita) -->
             <ImageView
                 android:id="@+id/btnMenu"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/ic_menu"
                 android:tint="#000000"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true" />
-
         </RelativeLayout>
 
+        <!-- DEFINIÇÃO -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/bg_header"
-            android:padding="12dp"
-            android:layout_marginBottom="16dp">
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/definicao_masa_molar"
                 android:textColor="#000000"
+                android:textSize="14sp"
+                android:lineSpacingExtra="2dp"
                 android:layout_marginBottom="8dp"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/unidade_de_medida_massa_molar"
-                android:textColor="#000000"/>
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:lineSpacingExtra="2dp"/>
         </LinearLayout>
 
-        <!-- Como Calcular -->
+        <!-- COMO CALCULAR -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Como Calcular:"
             android:textStyle="bold"
             android:textColor="#000000"
-            android:layout_marginBottom="8dp"/>
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/bg_header"
-            android:padding="12dp"
-            android:layout_marginBottom="16dp">
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="• Identifique os elementos que formam a substância e suas quantidades (índices).
-"/>
+                android:text="• Identifique os elementos que formam a substância e suas quantidades (índices)."
+                android:textSize="14sp"
+                android:lineSpacingExtra="2dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="• Multiplique a massa atômica de cada elemento pelo número de átomos desse elemento.
-"/>
+                android:text="• Multiplique a massa atômica de cada elemento pelo número de átomos desse elemento."
+                android:textSize="14sp"
+                android:lineSpacingExtra="2dp"
+                android:layout_marginTop="4dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="• Some todos os valores encontrados."/>
-
+                android:text="• Some todos os valores encontrados."
+                android:textSize="14sp"
+                android:lineSpacingExtra="2dp"
+                android:layout_marginTop="4dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="O resultado será a massa molar do composto."
                 android:textStyle="bold"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                />
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"/>
         </LinearLayout>
 
-        <!-- Fórmula -->
+        <!-- FÓRMULA -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Fórmula:"
             android:textStyle="bold"
-            android:layout_marginBottom="8dp"/>
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="5dp"
             android:background="@drawable/bg_header"
-            >
+            android:padding="16px"
+            android:layout_marginBottom="20px">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="6dp"
+                android:layout_marginBottom="7dp"
                 android:gravity="center"
-                android:padding="12dp"
-                android:text="@string/formula_massa_molar" />
+                android:padding="8dp"
+                android:text="@string/formula_massa_molar"
+                android:textSize="14sp"
+                android:background="#fff"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -148,30 +160,34 @@
                 android:text="Onde:\n• M = massa molar\n• n = número de átomos do elemento\n• A = massa atômica do elemento"
                 android:padding="8dp"
                 android:textColor="#000000"
-                android:layout_marginBottom="16dp"/>
+                android:textSize="14sp"
+                android:lineSpacingExtra="2dp"/>
         </LinearLayout>
 
-        <!-- Exemplo -->
+        <!-- EXEMPLO -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Exemplo:"
             android:textStyle="bold"
-            android:layout_marginBottom="8dp"/>
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/bg_header"
-            android:padding="12dp"
-            android:layout_marginBottom="24dp">
+            android:padding="16dp"
+            android:layout_marginBottom="20px">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Substância: H₂O"
                 android:textStyle="bold"
+                android:textSize="14sp"
                 android:layout_marginBottom="12dp"/>
 
             <TableLayout
@@ -188,51 +204,63 @@
                     <TextView
                         android:text="Elemento"
                         android:textStyle="bold"
-                        android:padding="4dp"/>
+                        android:padding="6dp"
+                        android:textSize="12sp"/>
                     <TextView
                         android:text="Quant. (n)"
                         android:textStyle="bold"
-                        android:padding="4dp"/>
+                        android:padding="6dp"
+                        android:textSize="12sp"/>
                     <TextView
                         android:text="M. Atômica (A)"
                         android:textStyle="bold"
-                        android:padding="4dp"/>
+                        android:padding="6dp"
+                        android:textSize="12sp"/>
                     <TextView
                         android:text="Cálculo"
                         android:textStyle="bold"
-                        android:padding="4dp"/>
+                        android:padding="6dp"
+                        android:textSize="12sp"/>
                 </TableRow>
 
                 <!-- Linha 1 -->
                 <TableRow>
                     <TextView
                         android:text="H"
-                        android:padding="4dp"/>
+                        android:padding="6dp"
+                        android:textSize="12sp"/>
                     <TextView
                         android:text="2"
-                        android:padding="4dp"/>
+                        android:padding="6dp"
+                        android:textSize="12sp"/>
                     <TextView
                         android:text="1"
-                        android:padding="4dp"/>
+                        android:padding="6dp"
+                        android:textSize="12sp"/>
                     <TextView
                         android:text="2 × 1 = 2"
-                        android:padding="4dp"/>
+                        android:padding="6dp"
+                        android:textSize="12sp"/>
                 </TableRow>
 
                 <!-- Linha 2 -->
                 <TableRow>
                     <TextView
                         android:text="O"
-                        android:padding="4dp"/>
+                        android:padding="6dp"
+                        android:textSize="12sp"/>
                     <TextView
                         android:text="1"
-                        android:padding="4dp"/>
+                        android:padding="6dp"
+                        android:textSize="12sp"/>
                     <TextView
                         android:text="16"
-                        android:padding="4dp"/>
+                        android:padding="6dp"
+                        android:textSize="12sp"/>
                     <TextView
                         android:text="1 × 16 = 16"
-                        android:padding="4dp"/>
+                        android:padding="6dp"
+                        android:textSize="12sp"/>
                 </TableRow>
             </TableLayout>
 
@@ -240,17 +268,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Massa Molar (H₂O): M = 2 + 16 = 18 g/mol"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:gravity="center"/>
         </LinearLayout>
 
         <!-- BOTÃO CALCULADORA -->
-        <!-- Linha com Voltar à esquerda e Calculadora à direita -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="8px">
 
-            <!-- Botão Calculadora -->
             <TextView
                 android:id="@+id/btnCalculadora"
                 android:layout_width="wrap_content"
@@ -259,17 +287,15 @@
                 android:text="Calculadora"
                 android:textColor="#000000"
                 android:textStyle="bold"
-                android:textSize="16sp"
-                android:paddingHorizontal="24dp"
-                android:paddingVertical="10dp"
+                android:textSize="15sp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="12dp"
                 android:gravity="center"
                 android:clickable="true"
                 android:focusable="true"
-                android:padding="20dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true" />
         </RelativeLayout>
-
 
     </LinearLayout>
 </ScrollView>

@@ -9,12 +9,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class CalculadoraMassaMolar extends AppCompatActivity {
 
@@ -22,18 +18,13 @@ public class CalculadoraMassaMolar extends AppCompatActivity {
     private TextView btnCalcular, tvResultado, btnAdicionarCampo;
     private ImageView btnMenu;
     private Double massaAtomicaInicial = null;
-    private boolean isPrimeiroElemento = true; // Nova variável para controlar o primeiro elemento
+    private boolean isPrimeiroElemento = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+        // REMOVA o EdgeToEdge e configure normalmente
         setContentView(R.layout.activity_calculadora_massa_molar);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         containerElementos = findViewById(R.id.containerElementos);
         btnCalcular = findViewById(R.id.btnCalcular);

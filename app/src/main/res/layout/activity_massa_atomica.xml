@@ -4,8 +4,6 @@
     android:id="@+id/main"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:layout_marginStart="20dp"
-    android:layout_marginEnd="20dp"
     android:padding="16dp">
 
     <LinearLayout
@@ -13,25 +11,25 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- CABEÇALHO -->
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="65dp"
             android:background="@drawable/bg_header"
-            android:paddingHorizontal="16dp"
-            android:layout_marginBottom="24dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginBottom="20dp"
             android:gravity="center_vertical">
 
-            <!-- Ícone de voltar (nova seta à esquerda) -->
             <ImageView
                 android:id="@+id/btnVoltar"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/ic_arrow_back"
                 android:tint="#000000"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true" />
 
-            <!-- Título (centralizado) -->
             <TextView
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
@@ -39,128 +37,147 @@
                 android:text="Massa Atômica"
                 android:textStyle="bold"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="21sp"
                 android:layout_centerInParent="true" />
 
-            <!-- Ícone de menu (mantido à direita) -->
             <ImageView
                 android:id="@+id/btnMenu"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/ic_menu"
                 android:tint="#000000"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true" />
-
         </RelativeLayout>
 
+        <!-- DEFINIÇÃO -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/bg_header"
-            android:padding="12dp"
-            android:layout_marginBottom="16dp">
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Definição: É o valor médio ponderado das massas dos isótopos de um elemento, considerando a abundância de cada um na natureza."
                 android:textColor="#000000"
+                android:textSize="14sp"
+                android:lineSpacingExtra="2dp"
                 android:layout_marginBottom="8dp"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Unidade de medida: É expressa em unidades de massa atômica (u), onde 1u = 1/12 da massa do átomo de carbono-12."
-                android:textColor="#000000"/>
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:lineSpacingExtra="2dp"/>
         </LinearLayout>
 
-        <!-- Como Calcular -->
+        <!-- COMO CALCULAR -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Como Calcular:"
             android:textStyle="bold"
             android:textColor="#000000"
-            android:layout_marginBottom="8dp"/>
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/bg_header"
-            android:padding="12dp"
-            android:layout_marginBottom="16dp">
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="• Multiplica-se a massa de cada isótopo pela sua abundância relativa."/>
+                android:text="• Multiplica-se a massa de cada isótopo pela sua abundância relativa."
+                android:textSize="14sp"
+                android:lineSpacingExtra="2dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="• Soma-se os valores obtidos."/>
+                android:text="• Soma-se os valores obtidos."
+                android:textSize="14sp"
+                android:lineSpacingExtra="2dp"
+                android:layout_marginTop="4dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="• Divide-se o resultado por 100 (já que a abundância está em porcentagem)."/>
+                android:text="• Divide-se o resultado por 100 (já que a abundância está em porcentagem)."
+                android:textSize="14sp"
+                android:lineSpacingExtra="2dp"
+                android:layout_marginTop="4dp"/>
         </LinearLayout>
 
-        <!-- Fórmula -->
+        <!-- FÓRMULA -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Fórmula:"
             android:textStyle="bold"
-            android:layout_marginBottom="8dp"/>
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Massa Atômica = (m1 × %1) + (m2 × %2) + ... / 100"
             android:gravity="center"
-            android:padding="12dp"
+            android:padding="16dp"
             android:background="@drawable/bg_header"
-            android:layout_marginBottom="16dp"/>
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
 
-        <!-- Exemplo -->
+        <!-- EXEMPLO -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Exemplo:"
             android:textStyle="bold"
-            android:layout_marginBottom="8dp"/>
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/bg_header"
-            android:padding="12dp"
-            android:layout_marginBottom="24dp">
+            android:padding="16dp"
+            android:layout_marginBottom="20px">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Isótopos do elemento X:\n\n22X → 40%\n36X → 60%"
+                android:textSize="14sp"
+                android:lineSpacingExtra="2dp"
                 android:layout_marginBottom="12dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cálculo:\nMassa Atômica = (22 × 40) + (36 × 60)\n/ 100\n= 880 + 2160 / 100\n= 30,4 u\n\nX = 30,4 u"/>
+                android:text="Cálculo:\nMassa Atômica = (22 × 40) + (36 × 60)\n/ 100\n= 880 + 2160 / 100\n= 30,4 u\n\nX = 30,4 u"
+                android:textSize="14sp"
+                android:lineSpacingExtra="2dp"/>
         </LinearLayout>
 
         <!-- BOTÃO CALCULADORA -->
-        <!-- BOTÃO CALCULADORA ESTILO SEGUNDA FOTO -->
-        <!-- Linha com Voltar à esquerda e Calculadora à direita -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="8px">
 
-            <!-- Botão Calculadora -->
             <TextView
                 android:id="@+id/btnCalculadora"
                 android:layout_width="wrap_content"
@@ -169,17 +186,15 @@
                 android:text="Calculadora"
                 android:textColor="#000000"
                 android:textStyle="bold"
-                android:textSize="16sp"
-                android:paddingHorizontal="24dp"
-                android:paddingVertical="10dp"
+                android:textSize="15sp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="12dp"
                 android:gravity="center"
                 android:clickable="true"
                 android:focusable="true"
-                android:padding="20dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true" />
         </RelativeLayout>
-
 
     </LinearLayout>
 </ScrollView>

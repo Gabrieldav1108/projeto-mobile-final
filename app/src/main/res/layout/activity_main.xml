@@ -4,23 +4,20 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="20dp"
-    android:layout_marginEnd="20dp"
     android:orientation="vertical"
     android:background="#FFFFFF"
-    android:padding="16dp">
+    android:padding="12dp">
 
-    <!-- CABEÇALHO AZUL COM BORDAS ARREDONDADAS -->
+    <!-- CABEÇALHO -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:background="@drawable/bg_header"
-        android:paddingHorizontal="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="24dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center_vertical">
 
-        <!-- Título centralizado -->
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
@@ -28,139 +25,150 @@
             android:text="Calculadora Química"
             android:textStyle="bold"
             android:textColor="#000000"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:layout_centerInParent="true" />
 
-        <!-- Ícone de menu hambúrguer -->
         <ImageView
             android:id="@+id/btnMenu"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             android:src="@drawable/ic_menu"
             android:tint="#000000"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true" />
     </RelativeLayout>
 
-    <FrameLayout
+    <!-- CURIOSIDADES -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:background="@drawable/bg_header"
-        android:padding="12dp">
+        android:padding="12dp"
+        android:layout_marginBottom="16dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Curiosidades"
-            android:textSize="16dp"
+            android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="#000"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
 
-        <!-- ADICIONE ESTE ID -->
         <TextView
             android:id="@+id/textViewCuriosidade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_text_arrounded"
-            android:padding="8dp"
+            android:padding="12dp"
             android:gravity="center"
             android:textColor="#000"
-            android:layout_marginTop="30dp"
+            android:textSize="12sp"
             android:text="Carregando curiosidade..."/>
-    </FrameLayout>
+    </LinearLayout>
 
-    <!-- FAIXA AZUL "Tabela Periódica" -->
+    <!-- TÍTULO ATALHOS -->
     <TextView
         android:id="@+id/labelTabela"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Atalhos\n Cálculos"
+        android:text="Atalhos Cálculos"
         android:gravity="center"
-        android:paddingEnd="50dp"
-        android:paddingStart="50dp"
-        android:paddingHorizontal="24dp"
-        android:paddingVertical="10dp"
+        android:paddingVertical="12dp"
         android:textStyle="bold"
-        android:textSize="23sp"
+        android:textSize="18sp"
         android:textColor="#000000"
-        android:layout_gravity="center"
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginBottom="12dp"/>
 
+    <!-- GRID RESPONSIVO -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
 
-        <GridLayout
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:columnCount="3"
-            android:rowCount="3"
-            android:alignmentMode="alignMargins"
-            android:useDefaultMargins="true">
+            android:orientation="vertical"
+            android:gravity="center">
 
-            <!-- Item 1 -->
             <LinearLayout
-                android:id="@+id/itemMassaAtomica"
-                android:layout_width="90dp"
-                android:layout_height="110dp"
-                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_margin="8dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground">
+                android:layout_marginBottom="16dp">
 
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                <!-- Item 1 - Massa Atômica -->
+                <LinearLayout
+                    android:id="@+id/itemMassaAtomica"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:padding="12dp"
                     android:background="@drawable/bg_button"
-                    android:padding="10dp"
-                    android:src="@drawable/ic_atom" />
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Massa Atômica"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"/>
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_atom"
+                        android:layout_marginBottom="8dp"
+                        android:scaleType="fitCenter"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Massa Atômica"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:ellipsize="end"/>
+                </LinearLayout>
+
+                <!-- Item 2 - Massa Molar -->
+                <LinearLayout
+                    android:id="@+id/itemMassaMolar"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:padding="12dp"
+                    android:background="@drawable/bg_button"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_atomo"
+                        android:layout_marginBottom="8dp"
+                        android:scaleType="fitCenter"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Massa Molar"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:ellipsize="end"/>
+                </LinearLayout>
+
             </LinearLayout>
 
-            <!-- Item 2 -->
-            <LinearLayout
-                android:id="@+id/itemMassaMolar"
-                android:layout_width="90dp"
-                android:layout_height="110dp"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_margin="8dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:background="@drawable/bg_button"
-                    android:padding="10dp"
-                    android:src="@drawable/ic_atomo" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Massa Molar"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"/>
-            </LinearLayout>
-
-        </GridLayout>
+        </LinearLayout>
     </ScrollView>
 
 </LinearLayout>
