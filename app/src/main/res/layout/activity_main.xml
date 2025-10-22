@@ -105,8 +105,8 @@
                 <!-- Item 1 - Massa Atômica -->
                 <LinearLayout
                     android:id="@+id/itemMassaAtomica"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:orientation="vertical"
                     android:gravity="center"
                     android:layout_margin="8dp"
@@ -128,17 +128,17 @@
                         android:layout_height="wrap_content"
                         android:text="Massa Atômica"
                         android:textSize="12sp"
+                        android:textColor="#000"
                         android:textStyle="bold"
                         android:gravity="center"
-                        android:maxLines="2"
                         android:ellipsize="end"/>
                 </LinearLayout>
 
                 <!-- Item 2 - Massa Molar -->
                 <LinearLayout
                     android:id="@+id/itemMassaMolar"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:orientation="vertical"
                     android:gravity="center"
                     android:layout_margin="8dp"
@@ -162,7 +162,38 @@
                         android:textSize="12sp"
                         android:textStyle="bold"
                         android:gravity="center"
-                        android:maxLines="2"
+                        android:textColor="#000"
+                        android:ellipsize="end"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/itemConcentracao"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:padding="12dp"
+                    android:background="@drawable/bg_button"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_concentracao"
+                        android:layout_marginBottom="8dp"
+                        android:scaleType="fitCenter"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Concentração"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="#000"
                         android:ellipsize="end"/>
                 </LinearLayout>
 

@@ -11,7 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoFinal">
-
+        <activity
+            android:name=".CalculadoraConcentracao"
+            android:exported="false" />
+        <activity
+            android:name=".Concentracao"
+            android:exported="false" />
         <activity
             android:name=".CalculadoraMassaMolar"
             android:exported="false"
@@ -42,6 +47,7 @@
             android:theme="@style/Theme.ProjetoFinal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -34,6 +34,10 @@ public class MenuHelper {
                     Intent intent = new Intent(context, MainActivity.class);
                     context.startActivity(intent);
                     return true;
+                }else if (id == R.id.nav_concentracao) {
+                    Intent intent = new Intent(context, Concentracao.class);
+                    context.startActivity(intent);
+                    return true;
                 }
                 return false;
             }

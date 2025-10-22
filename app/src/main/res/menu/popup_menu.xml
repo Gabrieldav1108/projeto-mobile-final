@@ -9,6 +9,9 @@
         android:id="@+id/nav_massa_molar"
         android:title="Massa Molar"/>
     <item
+        android:id="@+id/nav_concentracao"
+        android:title="Concentração"/>
+    <item
         android:id="@+id/nav_desenvolvedores"
         android:title="Desenvolvedores"/>
 
