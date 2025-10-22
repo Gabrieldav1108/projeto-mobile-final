@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoFinal">
         <activity
+            android:name=".CalculadoraDensidade"
+            android:exported="false" />
+        <activity
+            android:name=".Densidade"
+            android:exported="false" />
+        <activity
             android:name=".CalculadoraConcentracao"
             android:exported="false" />
         <activity

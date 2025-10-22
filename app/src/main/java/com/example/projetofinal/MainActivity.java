@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout itemMassaAtomica = findViewById(R.id.itemMassaAtomica);
         LinearLayout itemMassaMolar = findViewById(R.id.itemMassaMolar);
         LinearLayout itemConcentracao = findViewById(R.id.itemConcentracao);
+        LinearLayout itemDensidade = findViewById(R.id.itemDensidade);
 
         // Adicionar o listener de clique
         itemMassaAtomica.setOnClickListener(new View.OnClickListener() {
@@ -59,6 +60,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 irParaCalculadoraConcentracao();
+            }
+        });
+        itemDensidade.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                irParaCalculadoraDensidade();
             }
         });
 
@@ -106,6 +113,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void irParaCalculadoraConcentracao() {
         Intent intent = new Intent(this, CalculadoraConcentracao.class);
+        startActivity(intent);
+    }
+
+    private void irParaCalculadoraDensidade() {
+        Intent intent = new Intent(this, CalculadoraDensidade.class);
         startActivity(intent);
     }
 
