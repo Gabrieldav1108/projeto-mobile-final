@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoFinal">
         <activity
+            android:name=".CalculadoraNumeroMol"
+            android:exported="false" />
+        <activity
+            android:name=".NumeroMol"
+            android:exported="false" />
+        <activity
             android:name=".CalculadoraDensidade"
             android:exported="false" />
         <activity
