@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout itemNumMol = findViewById(R.id.itemNumMol);
         LinearLayout itemVolGas = findViewById(R.id.itemVolGas);
         LinearLayout itemDiluicao = findViewById(R.id.itemDiluicao);
+        LinearLayout itemEnergia = findViewById(R.id.itemEnergia);
 
         // Adicionar o listener de clique
         itemMassaAtomica.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +88,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 irParaCalculadoraDiluicao();
+            }
+        });
+        itemEnergia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                irParaCalculadoraEnergia();
             }
         });
 
@@ -152,6 +159,10 @@ public class MainActivity extends AppCompatActivity {
     }
     private void irParaCalculadoraDiluicao() {
         Intent intent = new Intent(this, CalculadoraDiluicao.class);
+        startActivity(intent);
+    }
+    private void irParaCalculadoraEnergia() {
+        Intent intent = new Intent(this, CalculadoraEnergia.class);
         startActivity(intent);
     }
 

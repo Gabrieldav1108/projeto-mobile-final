@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- CABEÇALHO -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@drawable/bg_header"
+            android:layout_marginBottom="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/btnVoltar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_arrow_back"
+                android:tint="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Energia (Calor)"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="21sp"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/btnMenu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_menu"
+                android:tint="#000000"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp" />
+        </RelativeLayout>
+
+        <!-- CONTEÚDO PRINCIPAL CENTRALIZADO -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- CAMPO MASSA -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="m = massa da substância (g)"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/etMassa"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Digite a massa"
+                android:inputType="numberDecimal"
+                android:background="@drawable/bg_header"
+                android:padding="14dp"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center" />
+
+            <!-- CAMPO CALOR ESPECÍFICO -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="c = calor específico (J/g°C)"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/etCalorEspecifico"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Digite o calor específico"
+                android:inputType="numberDecimal"
+                android:background="@drawable/bg_header"
+                android:padding="14dp"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center" />
+
+            <!-- VARIAÇÃO DE TEMPERATURA -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="∆T = variação de temperatura (°C)"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center" />
+
+            <!-- TEMPERATURA FINAL -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperatura Final:"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/etTempFinal"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Digite a temperatura final"
+                android:inputType="numberDecimal"
+                android:background="@drawable/bg_header"
+                android:padding="14dp"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center" />
+
+            <!-- TEMPERATURA INICIAL -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperatura Inicial:"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/etTempInicial"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Digite a temperatura inicial"
+                android:inputType="numberDecimal"
+                android:background="@drawable/bg_header"
+                android:padding="14dp"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center" />
+
+            <!-- BOTÃO CALCULAR CENTRALIZADO -->
+            <TextView
+                android:id="@+id/btnCalcular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calcular"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:background="@drawable/bg_button"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="30dp" />
+
+            <!-- RESULTADO -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resultado:"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tvResultado"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_header"
+                android:text="--"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="14dp"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

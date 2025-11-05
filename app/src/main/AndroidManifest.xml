@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoFinal">
         <activity
+            android:name=".CalculadoraEnergia"
+            android:exported="false" />
+        <activity
+            android:name=".Energia"
+            android:exported="false" />
+        <activity
             android:name=".CalculadoraDiluicao"
             android:exported="false" />
         <activity

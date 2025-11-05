@@ -54,6 +54,10 @@ public class MenuHelper {
                     Intent intent = new Intent(context, Diluicao.class);
                     context.startActivity(intent);
                     return true;
+                }else if (id == R.id.nav_energia) {
+                    Intent intent = new Intent(context, Energia.class);
+                    context.startActivity(intent);
+                    return true;
                 }
 
                 return false;

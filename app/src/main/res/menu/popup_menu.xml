@@ -24,6 +24,9 @@
         android:id="@+id/nav_diluicao"
         android:title="Diluição de Soluções"/>
     <item
+        android:id="@+id/nav_energia"
+        android:title="Energia liberada/absorvida"/>
+    <item
         android:id="@+id/nav_desenvolvedores"
         android:title="Desenvolvedores"/>
 
