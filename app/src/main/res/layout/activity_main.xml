@@ -292,6 +292,37 @@
                     android:textColor="#000"
                     android:ellipsize="end"/>
             </LinearLayout>
+            <LinearLayout
+                android:id="@+id/itemDiluicao"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="12dp"
+                android:background="@drawable/bg_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_diluicao"
+                    android:layout_marginBottom="8dp"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diluição de Soluções"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:ellipsize="end"/>
+            </LinearLayout>
 
         </GridLayout>
     </ScrollView>

@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoFinal">
         <activity
+            android:name=".CalculadoraDiluicao"
+            android:exported="false" />
+        <activity
+            android:name=".Diluicao"
+            android:exported="false" />
+        <activity
             android:name=".CalculadoraVolumeGas"
             android:exported="false" />
         <activity

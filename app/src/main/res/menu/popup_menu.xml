@@ -21,6 +21,9 @@
         android:id="@+id/nav_vol_gas"
         android:title="Volume de Gás"/>
     <item
+        android:id="@+id/nav_diluicao"
+        android:title="Diluição de Soluções"/>
+    <item
         android:id="@+id/nav_desenvolvedores"
         android:title="Desenvolvedores"/>
 

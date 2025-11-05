@@ -50,7 +50,12 @@ public class MenuHelper {
                     Intent intent = new Intent(context, VolumeGas.class);
                     context.startActivity(intent);
                     return true;
+                }else if (id == R.id.nav_diluicao) {
+                    Intent intent = new Intent(context, Diluicao.class);
+                    context.startActivity(intent);
+                    return true;
                 }
+
                 return false;
             }
         });
