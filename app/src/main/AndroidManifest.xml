@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoFinal">
         <activity
+            android:name=".CalculadoraVolumeGas"
+            android:exported="false" />
+        <activity
+            android:name=".VolumeGas"
+            android:exported="false" />
+        <activity
             android:name=".CalculadoraNumeroMol"
             android:exported="false" />
         <activity

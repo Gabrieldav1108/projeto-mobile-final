@@ -46,6 +46,10 @@ public class MenuHelper {
                     Intent intent = new Intent(context, NumeroMol.class);
                     context.startActivity(intent);
                     return true;
+                }else if (id == R.id.nav_vol_gas) {
+                    Intent intent = new Intent(context, VolumeGas.class);
+                    context.startActivity(intent);
+                    return true;
                 }
                 return false;
             }

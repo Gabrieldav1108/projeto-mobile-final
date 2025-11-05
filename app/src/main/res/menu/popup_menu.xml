@@ -18,6 +18,9 @@
         android:id="@+id/nav_num_mol"
         android:title="Número de mol"/>
     <item
+        android:id="@+id/nav_vol_gas"
+        android:title="Volume de Gás"/>
+    <item
         android:id="@+id/nav_desenvolvedores"
         android:title="Desenvolvedores"/>
 
